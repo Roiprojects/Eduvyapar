@@ -44,9 +44,9 @@ export const EduvaHeader: React.FC<EduvaHeaderProps> = ({
           className="flex items-center cursor-pointer select-none group flex-shrink-0"
         >
           <img
-            src="/assets/eduva_official_logo.png"
-            alt="EDUVA"
-            className="h-8 sm:h-9 w-auto object-contain group-hover:scale-105 transition-transform"
+            src="/assets/eduvyapar_logo_official.png"
+            alt="EduVyapar"
+            className="h-8 sm:h-[38px] w-auto object-contain group-hover:scale-105 transition-transform"
           />
         </div>
 

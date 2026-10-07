@@ -62,7 +62,7 @@ export const EduvaDashboard: React.FC<EduvaDashboardProps> = ({
       <aside className="w-full md:w-60 bg-white border-r border-slate-200/80 p-5 flex flex-col justify-between space-y-6">
         <div className="space-y-6">
           {/* Logo */}
-          <div className="flex items-center gap-2 cursor-pointer" onClick={() => onNavigateTab("home")}><img src="/assets/eduva_official_logo.png" alt="EDUVA" className="h-7 w-auto object-contain" /></div>
+          <div className="flex items-center gap-2 cursor-pointer" onClick={() => onNavigateTab("home")}><img src="/assets/eduvyapar_logo_official.png" alt="EduVyapar" className="h-7 w-auto object-contain" /></div>
 
           {/* Navigation Menu */}
           <nav className="space-y-1">

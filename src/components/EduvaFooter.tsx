@@ -92,9 +92,9 @@ export const EduvaFooter: React.FC<EduvaFooterProps> = ({
               className="cursor-pointer inline-block"
             >
               <img
-                src="/assets/eduva_official_logo.png"
-                alt="EDUVA"
-                className="h-9 w-auto object-contain brightness-0 invert"
+                src="/assets/eduvyapar_logo_dark_bg.png"
+                alt="EduVyapar"
+                className="h-9 sm:h-10 w-auto object-contain hover:opacity-95 transition-opacity"
               />
             </div>
             <p className="text-xs text-slate-400 leading-relaxed">
@@ -330,7 +330,7 @@ export const EduvaFooter: React.FC<EduvaFooterProps> = ({
         {/* Bottom Legal & Copyright Bar */}
         <div className="pt-8 border-t border-slate-800/80 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs text-slate-400">
           <div className="flex items-center gap-3">
-            <span className="font-bold text-white text-sm tracking-wide">EDUVA</span>
+            <span className="font-bold text-white text-sm tracking-wide">EduVyapar</span>
             <span>&bull;</span>
             <span>EduVyapar Enterprise Education Ecosystem</span>
             <span className="hidden sm:inline">&bull;</span>
@@ -338,7 +338,7 @@ export const EduvaFooter: React.FC<EduvaFooterProps> = ({
           </div>
 
           <div className="text-[11px] text-slate-400 text-center sm:text-right">
-            &copy; 2026 EDUVA Global Education Platform. All rights reserved. Powered by VAPS Technosoft.
+            &copy; 2026 EduVyapar Global Education Platform. All rights reserved. Powered by VAPS Technosoft.
           </div>
         </div>
       </div>
