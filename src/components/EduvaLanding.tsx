@@ -215,43 +215,53 @@ export const EduvaLanding: React.FC<EduvaLandingProps> = ({
         </div>
 
         {/* Bottom Stats & Community Bar */}
-        <div className="relative z-10 w-full bg-white border-t border-slate-100 py-6 px-6 sm:px-12">
-          <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-6">
-            <div className="grid grid-cols-2 sm:grid-cols-4 gap-6 sm:gap-10 w-full lg:w-auto">
-              <div className="sm:border-r border-slate-200/80 sm:pr-8">
-                <div className="text-2xl sm:text-3xl font-bold text-[#0066cc] leading-none">50L+</div>
-                <div className="text-xs text-slate-500 font-medium mt-1.5">Students</div>
+        <div className="relative z-10 w-full bg-[#f4f9fd] border-t border-[#d8e6f2] py-4 sm:py-5 px-6 sm:px-10 lg:px-12">
+          <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-6 lg:gap-4">
+            
+            {/* 4 Stats Items with Hairline Dividers */}
+            <div className="flex flex-wrap sm:flex-nowrap items-center justify-between sm:justify-start w-full lg:w-auto gap-4 sm:gap-0">
+              <div className="pr-6 sm:pr-8 lg:pr-10">
+                <div className="text-2xl sm:text-[27px] font-bold text-[#1b3e70] tracking-tight leading-none">50L+</div>
+                <div className="text-xs sm:text-[12.5px] text-[#637c9d] font-medium mt-1.5 whitespace-nowrap">Students</div>
               </div>
-              <div className="sm:border-r border-slate-200/80 sm:pr-8">
-                <div className="text-2xl sm:text-3xl font-bold text-[#0066cc] leading-none">5L+</div>
-                <div className="text-xs text-slate-500 font-medium mt-1.5">Institutions</div>
+              <div className="hidden sm:block h-9 w-[1px] bg-[#d9e6f2]"></div>
+
+              <div className="px-4 sm:px-8 lg:px-10">
+                <div className="text-2xl sm:text-[27px] font-bold text-[#1b3e70] tracking-tight leading-none">5L+</div>
+                <div className="text-xs sm:text-[12.5px] text-[#637c9d] font-medium mt-1.5 whitespace-nowrap">Institutions</div>
               </div>
-              <div className="sm:border-r border-slate-200/80 sm:pr-8">
-                <div className="text-2xl sm:text-3xl font-bold text-[#0066cc] leading-none">1000+</div>
-                <div className="text-xs text-slate-500 font-medium mt-1.5">Education Products</div>
+              <div className="hidden sm:block h-9 w-[1px] bg-[#d9e6f2]"></div>
+
+              <div className="px-4 sm:px-8 lg:px-10">
+                <div className="text-2xl sm:text-[27px] font-bold text-[#1b3e70] tracking-tight leading-none">1000+</div>
+                <div className="text-xs sm:text-[12.5px] text-[#637c9d] font-medium mt-1.5 whitespace-nowrap">Education Products</div>
               </div>
-              <div>
-                <div className="text-2xl sm:text-3xl font-bold text-[#0066cc] leading-none">2500+</div>
-                <div className="text-xs text-slate-500 font-medium mt-1.5">Jobs</div>
+              <div className="hidden sm:block h-9 w-[1px] bg-[#d9e6f2]"></div>
+
+              <div className="px-4 sm:px-8 lg:px-10">
+                <div className="text-2xl sm:text-[27px] font-bold text-[#1b3e70] tracking-tight leading-none">2500+</div>
+                <div className="text-xs sm:text-[12.5px] text-[#637c9d] font-medium mt-1.5 whitespace-nowrap">Jobs</div>
               </div>
             </div>
+
+            {/* Hairline Divider before Community Section (Visible on desktop) */}
+            <div className="hidden lg:block h-9 w-[1px] bg-[#d9e6f2]"></div>
 
             {/* Right Community Section */}
             <div 
               onClick={() => onNavigate("learn")}
-              className="flex items-center gap-3.5 cursor-pointer group hover:opacity-95 transition-opacity"
+              className="flex items-center gap-3.5 sm:gap-4 cursor-pointer group hover:opacity-95 transition-opacity self-center lg:self-auto"
             >
-              <div className="flex -space-x-2">
-                <img src="https://images.unsplash.com/photo-1534528741775-53994a69daeb?w=300&auto=format&fit=crop&q=95" alt="Learner" className="w-8 h-8 rounded-full border-2 border-white object-cover shadow-xs" />
-                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=300&auto=format&fit=crop&q=95" alt="Educator" className="w-8 h-8 rounded-full border-2 border-white object-cover shadow-xs" />
-                <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?w=300&auto=format&fit=crop&q=95" alt="Student" className="w-8 h-8 rounded-full border-2 border-white object-cover shadow-xs" />
-                <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=300&auto=format&fit=crop&q=95" alt="Mentor" className="w-8 h-8 rounded-full border-2 border-white object-cover shadow-xs" />
-              </div>
-              <p className="text-xs sm:text-[13px] font-medium text-slate-700 max-w-[210px] leading-tight">
+              <img 
+                src="/assets/community_avatars_exact.png" 
+                alt="Community Learners and Educators" 
+                className="h-9 sm:h-10 w-auto object-contain flex-shrink-0" 
+              />
+              <p className="text-xs sm:text-[12.5px] text-[#4d6b91] font-normal leading-[1.25] max-w-[195px]">
                 Join a global community of learners and educators
               </p>
-              <div className="w-8 h-8 rounded-full border border-blue-400 text-[#0066cc] flex items-center justify-center group-hover:bg-[#0066cc] group-hover:text-white transition-all shadow-xs">
-                <ArrowRight className="w-3.5 h-3.5" />
+              <div className="w-8 h-8 sm:w-9 sm:h-9 rounded-full border border-[#8ec0ea] text-[#0066cc] flex items-center justify-center group-hover:bg-[#0066cc] group-hover:text-white transition-all shadow-xs flex-shrink-0">
+                <ArrowRight className="w-4 h-4 stroke-[2.2]" />
               </div>
             </div>
           </div>
