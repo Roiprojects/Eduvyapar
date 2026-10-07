@@ -116,17 +116,15 @@ export const EduvaLanding: React.FC<EduvaLandingProps> = ({
       {/* PURE VECTOR & ULTRA-HIGH-RESOLUTION HERO CONTAINER                        */}
       {/* ========================================================================= */}
       <section className="relative w-full max-w-[1360px] mx-auto rounded-3xl overflow-hidden bg-white shadow-sm border border-slate-100 flex flex-col justify-between min-h-[580px] lg:min-h-[620px]">
-        {/* The Clean Photography Backdrop (100% Uncompressed without baked text) */}
+        {/* The Clean Photography Backdrop (Matches 01_homepage_full exactly) */}
         <div className="absolute inset-0 z-0">
           <img
             src="/assets/hero_campus_student.png"
             alt="Campus Student"
-            className="w-full h-full object-cover object-[78%_center]"
+            className="w-full h-full object-cover object-center"
           />
-          {/* Soft sunny white gradient wash on left for maximum contrast */}
-          <div className="absolute inset-0 bg-gradient-to-r from-white via-white/92 via-48% to-transparent pointer-events-none" />
-          {/* Top sky highlight */}
-          <div className="absolute inset-x-0 top-0 h-24 bg-gradient-to-b from-white/30 to-transparent pointer-events-none" />
+          {/* Subtle natural contrast scrim for left typography */}
+          <div className="absolute inset-0 bg-gradient-to-r from-white/35 via-transparent to-transparent pointer-events-none" />
         </div>
 
         {/* Embedded Top Navigation Bar */}
@@ -203,16 +201,7 @@ export const EduvaLanding: React.FC<EduvaLandingProps> = ({
           </div>
         </div>
 
-        {/* Script Text over Student (Right Side) */}
-        <div className="absolute right-10 sm:right-16 lg:right-20 bottom-28 sm:bottom-32 lg:bottom-36 z-10 text-right pointer-events-none select-none hidden md:block">
-          <div className="font-script text-2xl sm:text-3xl lg:text-[34px] text-white/95 leading-[1.12] tracking-wide drop-shadow-[0_2px_8px_rgba(0,0,0,0.6)] transform -rotate-2">
-            <div>Better</div>
-            <div>Learning</div>
-            <div>Brighter</div>
-            <div>Future</div>
-            <div className="w-20 ml-auto mt-1 border-b-2 border-white/90 shadow-sm"></div>
-          </div>
-        </div>
+        {/* Script text is baked into the high-res backdrop naturally */}
 
         {/* Bottom Stats & Community Bar */}
         <div className="relative z-10 w-full bg-[#f4f9fd] border-t border-[#d8e6f2] py-4 sm:py-5 px-6 sm:px-10 lg:px-12">
