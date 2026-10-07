@@ -46,41 +46,67 @@ export const EduvaLanding: React.FC<EduvaLandingProps> = ({
       id: "learn",
       title: "Learn",
       subtitle: "Courses & Teachers",
-      icon: <GraduationCap className="w-5 h-5 text-teal-600" />,
-      iconBg: "bg-teal-50",
       tab: "learn",
+      icon: (
+        <svg className="w-5 h-5 text-[#0066cc]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M22 10v6M2 10l10-5 10 5-10 5z" />
+          <path d="M6 12v5c3 3 9 3 12 0v-5" />
+        </svg>
+      ),
     },
     {
       id: "apply",
       title: "Apply",
       subtitle: "Schools, Colleges & Courses",
-      icon: <ClipboardCheck className="w-5 h-5 text-[#0066cc]" />,
-      iconBg: "bg-blue-50",
       tab: "admissions",
+      icon: (
+        <svg className="w-5 h-5 text-[#0066cc]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <rect x="5" y="4" width="14" height="17" rx="2" />
+          <path d="M9 2h6a1 1 0 0 1 1 1v2H8V3a1 1 0 0 1 1-1z" />
+          <path d="M9 12l2 2 4-4" />
+        </svg>
+      ),
     },
     {
       id: "work",
       title: "Work",
       subtitle: "Jobs & Career Opportunities",
-      icon: <Briefcase className="w-5 h-5 text-[#0066cc]" />,
-      iconBg: "bg-blue-50",
       tab: "jobs",
+      icon: (
+        <svg className="w-5 h-5 text-[#0066cc]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <rect x="3" y="7" width="18" height="13" rx="2" />
+          <path d="M8 7V5a2 2 0 0 1 2-2h4a2 2 0 0 1 2 2v2" />
+          <line x1="3" y1="13" x2="21" y2="13" />
+        </svg>
+      ),
     },
     {
       id: "shop",
       title: "Shop",
       subtitle: "Books, Uniforms & More",
-      icon: <ShoppingBag className="w-5 h-5 text-[#0066cc]" />,
-      iconBg: "bg-blue-50",
       tab: "marketplace",
+      icon: (
+        <svg className="w-5 h-5 text-[#0066cc]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <path d="M6 2L3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z" />
+          <line x1="3" y1="6" x2="21" y2="6" />
+          <path d="M16 10a4 4 0 0 1-8 0" />
+        </svg>
+      ),
     },
     {
       id: "connect",
       title: "Connect",
       subtitle: "Institutions & Resources",
-      icon: <Share2 className="w-5 h-5 text-[#0066cc]" />,
-      iconBg: "bg-blue-50",
       tab: "institutes",
+      icon: (
+        <svg className="w-5 h-5 text-[#0066cc]" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
+          <circle cx="18" cy="5" r="3" />
+          <circle cx="6" cy="12" r="3" />
+          <circle cx="18" cy="19" r="3" />
+          <line x1="8.59" y1="13.51" x2="15.42" y2="17.49" />
+          <line x1="15.41" y1="6.51" x2="8.59" y2="10.49" />
+        </svg>
+      ),
     },
   ];
 
@@ -152,22 +178,22 @@ export const EduvaLanding: React.FC<EduvaLandingProps> = ({
               </form>
             </div>
 
-            {/* 5 Floating Category Cards (Glassmorphism & Crisp Vector Icons) */}
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-3 pt-3 max-w-2xl">
+            {/* 5 Floating Category Cards (Matches 01_homepage_full exactly) */}
+            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-2.5 sm:gap-3 pt-3 w-full max-w-[680px]">
               {featureCards.map((card) => (
                 <div
                   key={card.id}
                   onClick={() => onNavigate(card.tab)}
-                  className="bg-white/95 backdrop-blur-md p-3.5 sm:p-4 rounded-2xl border border-white/90 shadow-[0_4px_25px_rgba(0,0,0,0.06)] hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer group flex flex-col justify-between"
+                  className="bg-white/95 backdrop-blur-md p-3.5 sm:p-4 rounded-2xl border border-white/90 shadow-[0_6px_24px_rgba(15,44,89,0.06)] hover:shadow-[0_12px_32px_rgba(15,44,89,0.12)] hover:-translate-y-1 transition-all duration-300 cursor-pointer group flex flex-col justify-between min-h-[110px] sm:min-h-[118px]"
                 >
-                  <div className={`w-8 h-8 rounded-xl ${card.iconBg} flex items-center justify-center mb-2.5 group-hover:scale-110 transition-transform shadow-xs`}>
+                  <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-full bg-[#edf6fc] flex items-center justify-center mb-2.5 group-hover:scale-110 transition-transform shadow-xs">
                     {card.icon}
                   </div>
                   <div>
-                    <div className="font-bold text-slate-900 text-xs sm:text-[13px] group-hover:text-[#0066cc] transition-colors">
+                    <div className="font-bold text-[#0f2c59] text-xs sm:text-[14px] tracking-tight group-hover:text-[#0066cc] transition-colors leading-tight">
                       {card.title}
                     </div>
-                    <div className="text-[10px] text-slate-500 leading-tight mt-0.5">
+                    <div className="text-[10px] sm:text-[10.5px] text-[#64748b] leading-[1.25] font-normal mt-1">
                       {card.subtitle}
                     </div>
                   </div>
