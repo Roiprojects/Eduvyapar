@@ -116,15 +116,15 @@ export const EduvaLanding: React.FC<EduvaLandingProps> = ({
       {/* PURE VECTOR & ULTRA-HIGH-RESOLUTION HERO CONTAINER                        */}
       {/* ========================================================================= */}
       <section className="relative w-full max-w-[1360px] mx-auto rounded-3xl overflow-hidden bg-white shadow-sm border border-slate-100 flex flex-col justify-between min-h-[580px] lg:min-h-[620px]">
-        {/* The Clean Photography Backdrop (Matches 01_homepage_full exactly) */}
+        {/* The Clean Photography Backdrop from User's Image */}
         <div className="absolute inset-0 z-0">
           <img
             src="/assets/hero_campus_student.png"
             alt="Campus Student"
-            className="w-full h-full object-cover object-center"
+            className="w-full h-full object-cover object-[82%_center]"
           />
-          {/* Subtle natural contrast scrim for left typography */}
-          <div className="absolute inset-0 bg-gradient-to-r from-white/35 via-transparent to-transparent pointer-events-none" />
+          {/* Soft natural gradient on left to guarantee crisp readability */}
+          <div className="absolute inset-0 bg-gradient-to-r from-white/70 via-white/20 via-48% to-transparent pointer-events-none" />
         </div>
 
         {/* Embedded Top Navigation Bar */}
@@ -201,7 +201,16 @@ export const EduvaLanding: React.FC<EduvaLandingProps> = ({
           </div>
         </div>
 
-        {/* Script text is baked into the high-res backdrop naturally */}
+        {/* Script Text over Student (Right Side) */}
+        <div className="absolute right-6 sm:right-10 lg:right-14 bottom-24 sm:bottom-28 lg:bottom-32 z-10 text-right pointer-events-none select-none hidden md:block">
+          <div className="font-script text-2xl sm:text-3xl lg:text-[32px] text-white/95 leading-[1.15] tracking-wide drop-shadow-[0_2px_8px_rgba(0,0,0,0.65)] transform -rotate-2">
+            <div>Better</div>
+            <div>Learning</div>
+            <div>Brighter</div>
+            <div>Future</div>
+            <div className="w-16 ml-auto mt-1 border-b-2 border-white/90 shadow-sm"></div>
+          </div>
+        </div>
 
         {/* Bottom Stats & Community Bar */}
         <div className="relative z-10 w-full bg-[#f4f9fd] border-t border-[#d8e6f2] py-4 sm:py-5 px-6 sm:px-10 lg:px-12">
